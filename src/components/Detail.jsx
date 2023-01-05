@@ -8,7 +8,25 @@ function Detail() {
         <Background>
             <img src="https://static.bunnycdn.ru/i/cache/images/2020/07/a75f3868f94966946d2945da88baf412.jpg" alt="" />
         </Background>
-        <ImageTitle></ImageTitle>
+        <ImageTitle>
+          <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/28F931D5919035A79382C15084626798511C65FA6C5195966B6461C8923834E6/scale?width=1920&aspectRatio=1.78&format=png" alt="" />
+        </ImageTitle>
+        <Controls>
+          <PlayButton>
+            <img src="/images/play-icon-black.png" alt="play-icon" />
+            <span>Play</span>
+          </PlayButton>
+          <TrailerButton>
+            <img src="/images/play-icon-white.png" alt="play-icon" />
+            <span>Trailer</span>
+          </TrailerButton>
+          <AddButton>
+            <span>+</span>
+          </AddButton>
+          <GroupWatchButton>
+            <img src="/images/group-icon.png" alt="group" />
+          </GroupWatchButton>
+        </Controls>
       </Container>
     </div>
   )
@@ -17,8 +35,8 @@ function Detail() {
 export default Detail
 
 const Container = styled.div`
-    minHeight: calc(100vh - 70px);
-    padding: 0 calc(3.5vw +5px);
+    min-height: calc(100vh - 70px);
+    padding: 0 calc(3.5vw + 5px);
     position:relative;
 `
  const Background = styled.div`
@@ -34,4 +52,62 @@ const Container = styled.div`
         height:100%;
         object-fit:cover
     }
+ `
+ const ImageTitle = styled.div`
+    height: 30vh;
+    width:35vw;
+    min-width:200px;
+    min-height: 170px;
+    margin-top:2rem;
+    img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+ `
+ const Controls = styled.div`
+  display:flex;
+  align-items:center;
+ `
+ const PlayButton = styled.button`
+    border-radius: 4px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    height: 56px;
+    background:(249, 249, 249);
+    border: none;
+    padding: 0 24px;
+    margin-right: 22px;
+    letter-spacing: 1.8px;
+    cursor:pointer;
+    &:hover{
+      background: rgb(198,198,198);
+    }
+ `
+ const TrailerButton = styled(PlayButton)`
+ background: rgba(0,0,0,0.3);
+
+ border:1px solid rgb(249,249,249);
+ color: rgb(249,249,249);
+ text-transform: upercase;
+ `
+ const AddButton = styled.button`
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border: 2px solid white;
+  background: rgba(0,0,0,0.6);
+  cursor:pointer;
+  span{
+    font-size:1.8rem;
+    color:white;
+  }
+  margin-right: 16px;
+
+ `
+ const GroupWatchButton = styled(AddButton)`
  `

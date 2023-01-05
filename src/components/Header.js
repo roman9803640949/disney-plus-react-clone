@@ -51,7 +51,7 @@ const NavMenu = styled.div`
     display: flex;
     flex:1;
     margin-left: 25px;
-    overflow-x:hidden;
+    overflow:hidden;
     a {
         display:flex;
         color:white;
