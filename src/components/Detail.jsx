@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 function Detail() {
   return (
-    <div>
       <Container>
         <Background>
             <img src="https://static.bunnycdn.ru/i/cache/images/2020/07/a75f3868f94966946d2945da88baf412.jpg" alt="" />
@@ -34,7 +33,6 @@ function Detail() {
         Bao is a 2018 American computer-animated short film written and directed by Domee Shi and produced by Pixar Animation Studios. It is the first Pixar short film to be directed by a female director. It was screened at the Tribeca Film Festival before being released with Incredibles 2 on June 15, 2018.
         </Description>
       </Container>
-    </div>
   )
 }
 
@@ -64,7 +62,7 @@ const Container = styled.div`
     width:35vw;
     min-width:200px;
     min-height: 170px;
-    margin-top:2rem;
+    padding-top:2rem;
     img{
       width:100%;
       height:100%;
@@ -130,4 +128,5 @@ const Container = styled.div`
   line-height: 1.4;
   font-size:20px;
   margin-top:16px;
+  max-width:700px;
  `
