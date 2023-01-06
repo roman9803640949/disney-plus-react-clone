@@ -27,6 +27,12 @@ function Detail() {
             <img src="/images/group-icon.png" alt="group" />
           </GroupWatchButton>
         </Controls>
+        <Subtitle>
+          2018 - 7m - Family, Fantasy, Kids, Animation
+        </Subtitle>
+        <Description>
+        Bao is a 2018 American computer-animated short film written and directed by Domee Shi and produced by Pixar Animation Studios. It is the first Pixar short film to be directed by a female director. It was screened at the Tribeca Film Festival before being released with Incredibles 2 on June 15, 2018.
+        </Description>
       </Container>
     </div>
   )
@@ -110,4 +116,18 @@ const Container = styled.div`
 
  `
  const GroupWatchButton = styled(AddButton)`
+  background: rgb(0,0,0)
+ `
+
+ const Subtitle = styled.div`
+  color: rgb(249,249,249);
+  font-size: 15px;
+  min-height: 20px;
+  margin-top:26px;
+  `
+  const Description = styled.div`
+  color: rgb(249,249,249);
+  line-height: 1.4;
+  font-size:20px;
+  margin-top:16px;
  `
