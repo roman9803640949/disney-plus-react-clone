@@ -1,27 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {selectMovies} from "../features/movie/movieSlice"
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 const Movies = () => {
-  return (
+  const movies = useSelector(selectMovies)
+   return (
     <div>
       <Container>
-        <h4> Recommended for you</h4>
+        <h4> Recommended for you </h4>
         <Content>
-          <Wrap>
-          <img src="https://img.primewire.mx/resize/1280x766/cd/03/cd0345993f4023b1f4e3f5ba7833d727/cd0345993f4023b1f4e3f5ba7833d727.jpg" alt="" />
-          </Wrap>
-          <Wrap>
-            <img src="https://img.primewire.mx/resize/1280x766/aa/b2/aab2cbdeebfe4ac0832f61b5633b2ead/aab2cbdeebfe4ac0832f61b5633b2ead.jpg" alt="" />
-          </Wrap>
-          <Wrap>
-            <img src="https://img.primewire.mx/resize/1280x766/aa/b2/aab2cbdeebfe4ac0832f61b5633b2ead/aab2cbdeebfe4ac0832f61b5633b2ead.jpg" alt="" />
-          </Wrap>
-          <Wrap>
-            <img src="https://img.primewire.mx/resize/1280x766/e9/06/e9069abb158058835051712ae0a95d49/e9069abb158058835051712ae0a95d49.jpg" alt="" />
-          </Wrap>
-          <Wrap>
-            <img src="https://img.primewire.mx/resize/1280x766/70/9b/709b2035bffb1f1bc40b5bf2bf62905b/709b2035bffb1f1bc40b5bf2bf62905b.jpg" alt="" />
-          </Wrap>
+          {
+            movies && movies.map((movie)=>(
+            <Wrap key={movie.id}>
+              <Link to={`/detail/${movie.id}`}>
+                <img src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" />
+              </Link>
+            </Wrap>
+            ))
+          }
         </Content>
       </Container>
     </div>
